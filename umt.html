@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UMT Home</title>
+<link rel="stylesheet" href="umt.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+    <img src="umtlogo.jpg" alt="UMT Logo" class="umt-logo">
+    <h1>Universiti Malaysia Terengganu</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
+<ul>
+    <li><a href="umt.html" class="nav-link">Home</a></li>
+
+    <li class="dropdown">
+        <a href="aboutme.html" class="nav-link">About</a>
+        <ul class="dropdown-content">
+            <li><a href="history.html" class="nav-link">History</a></li>
+            <li><a href="visionmission.html" class="nav-link">Vision & Mission</a></li>
+            <li><a href="education.html" class="nav-link">Education</a></li>
+            <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+        </ul>
+    </li>
+
+    <li class="dropdown">
+        <a href="faculty.html" class="nav-link">Faculty</a>
+        <ul class="dropdown-content">
+            <li><a href="sainskomputer_dan_matematik.html" class="nav-link">Faculty of Computer Science & Mathematics</a></li>
+            <li><a href="sainsgunaan.html" class="nav-link">Faculty of Applied Science & Technology</a></li>
+            <li><a href="pengurusan.html" class="nav-link">Faculty of Business, Economics and Social Development</a></li>
+            <li><a href="sainsmarin.html" class="nav-link">Faculty of Maritime Studies</a></li>
+        </ul>
+    </li>
+
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+</ul>
+</nav>
+
+<!-- Hero / Slideshow -->
+<div class="hero">
+    <div class="slideshow-container">
+        <img class="slides" src="slide1.png" />
+        <img class="slides" src="slide2.png" />
+        <img class="slides" src="slide3.png" />
+    </div>
+</div>
+
+<!-- Cards Layout -->
+<div class="container">
+    <div class="card">
+        <h2>Welcome to Universiti Malaysia Terengganu</h2>
+        <p>Explore our faculties, programs, and achievements. Click the navigation above to learn more.</p>
+        
+    </div>
+    <div class="card">
+        <h2>About UMT</h2>
+        <p>Discover UMT's history, vision, mission, education, and achievements.</p>
+        <a href="aboutme.html" class="button">Read More</a>
+    </div>
+    <div class="card">
+        <h2>Faculties</h2>
+        <p>Check out the diverse faculties and programs offered at UMT.</p>
+        <a href="faculty.html" class="button">Read More</a>
+    </div>
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Get in touch with UMT administration and faculty members.</p>
+        <a href="contact.html" class="button">Read More</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 NurainNazirah. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JS Slideshow -->
+<script>
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+    let slides = document.getElementsByClassName("slides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 3000);
+}
+</script>
+
+</body>
+</html>
+

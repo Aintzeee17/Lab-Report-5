@@ -1,0 +1,236 @@
+/* ======= HEADER WITH LOGO ======= */
+.site-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 30px;
+    background-color: white; 
+    border-bottom: 2px solid #ddd;
+}
+
+.umt-logo {
+    width: 60px;
+    height: auto;
+}
+
+.site-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* === Reset & Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f7fc;
+    color: #333;
+}
+
+/* === Navigation === */
+nav {
+    background-color: #6a0dad; 
+    position: relative;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 20px;
+    color: white; 
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-link:link { color: white; }
+.nav-link:visited { color: #ffda00; }
+.nav-link:hover { background-color: #4b0082; cursor: pointer; border-radius: 5px; }
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: #6a0dad;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+    color: white;
+}
+
+.dropdown-content li a:hover {
+    background-color: #4b0082;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* === Hero Section with Background Image / Slideshow === */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    font-size: 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/* === Container & Cards === */
+.container, .faculty-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card, .faculty-card {
+    flex: 1 1 45%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover, .faculty-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Faculty Card Specific */
+.faculty-card {
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.faculty-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.faculty-img {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.faculty-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.faculty-info h3 {
+    font-size: 22px;
+    color: #6a0dad;
+    margin-bottom: 10px;
+}
+
+.faculty-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.faculty-info ul li {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* === Headings === */
+h1, h2 {
+    color: #6a0dad;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+p { font-size: 18px; line-height: 1.6; color: #555; }
+
+/* === Buttons === */
+.button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #ffda00;
+    color: #6a0dad;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.button:hover { background-color: #ffe84d; }
+
+/* === Footer === */
+footer {
+    background-color: #f1f1f1;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+footer a {
+    color: #ffda00;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover { text-decoration: underline; }
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .slides { height: 250px; }
+    nav ul { flex-direction: column; }
+    .card, .faculty-card { flex: 1 1 100%; }
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 16px; }
+}
+
